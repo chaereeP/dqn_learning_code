@@ -1,4 +1,3 @@
-import gym
 import torch.optim as optim
 
 from dqn_model import DQN

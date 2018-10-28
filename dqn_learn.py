@@ -216,10 +216,10 @@ def dqn_learing(
             best_mean_episode_reward = max(best_mean_episode_reward, mean_episode_reward)
 
         if len(episode_rewards) > 0:
-            writer.add_scalar('data/TTbot/DQN/score', episode_rewards[-1], len(episode_rewards))
-            writer.add_scalar('data/TTbot/DQN/mean_score', mean_episode_reward, len(episode_rewards))
+            writer.add_scalar('data/DQN/score', episode_rewards[-1], len(episode_rewards))
+            writer.add_scalar('data/DQN/mean_score', mean_episode_reward, len(episode_rewards))
             if len(episode_rewards) > 100:
-                writer.add_scalar('data/TTbot/DQN/best_mean_score', best_mean_episode_reward, len(episode_rewards))
+                writer.add_scalar('data/DQN/best_mean_score', best_mean_episode_reward, len(episode_rewards))
 
         if t % LOG_EVERY_N_STEPS == 0 and t > learning_starts:
             print("Timestep %d" % (t,))
@@ -228,7 +228,7 @@ def dqn_learing(
             print("episodes %d" % len(episode_rewards))
             print("exploration %f" % exploration.value(t))
             sys.stdout.flush()
-            torch.save(Q, 'DQN_net0731.pt')
+            torch.save(Q, 'DQN_net1029.pt')
 
     
     writer.close()

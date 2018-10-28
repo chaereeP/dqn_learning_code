@@ -29,3 +29,23 @@ The algorithm is defined in `dqn_learn.py`
 The running script and hyper-parameters are defined in `main.py`
 
 related paper link https://www.nature.com/articles/nature14236.pdf
+
+-------------------------------------------------------------------
+if you want to use tensorboard in pythorch(monitoring DNN)
+
+1. install  tensorboardX
+```
+pip install tensorboardX
+```
+2. isntall tensorflow
+```
+pip install tensorflow
+```
+3. launch tensorboard at your directory
+```
+cd dqn_learning_code
+tensorboard --logdir runs
+```
+4. copy the address and paste the address at webbrowser
+
+ex) http://humanlab-Z370-AORUS-Gaming-3:6006
