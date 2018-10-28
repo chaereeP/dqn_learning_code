@@ -376,7 +376,7 @@ class Task:
             frame_debug = self.draw_debug_frame(self.frame)
             cv2.imshow("frame_debug", frame_debug)
             cv2.imshow("frame_debug_gray", self.frame_gray)
-            cv2.waitKey(1)
+            cv2.waitKey(100)
 
         return self.frame_gray, reward, self.done
 

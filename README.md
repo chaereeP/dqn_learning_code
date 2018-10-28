@@ -27,3 +27,5 @@ The model is defined in `dqn_model.py`
 The algorithm is defined in `dqn_learn.py`
 
 The running script and hyper-parameters are defined in `main.py`
+
+related paper link https://www.nature.com/articles/nature14236.pdf
