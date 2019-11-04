@@ -15,6 +15,7 @@ import torch.autograd as autograd
 
 from utils.replay_buffer import ReplayBuffer
 from tensorboardX import SummaryWriter
+#tensorboardX : 현재 학습되고 있는 정도를 모니터 할 수 있게 해줌
 
 USE_CUDA = torch.cuda.is_available()
 dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
@@ -221,6 +222,7 @@ def dqn_learing(
             if len(episode_rewards) > 100:
                 writer.add_scalar('data/DQN/best_mean_score', best_mean_episode_reward, len(episode_rewards))
 
+                #LOG 저장
         if t % LOG_EVERY_N_STEPS == 0 and t > learning_starts:
             print("Timestep %d" % (t,))
             print("mean reward (100 episodes) %f" % mean_episode_reward)
